@@ -1,0 +1,1 @@
+SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://soporte:123@localhost/DhStoreNEW?driver=ODBC+Driver+17+for+SQL+Server'
