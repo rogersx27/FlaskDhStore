@@ -18,7 +18,7 @@ from .Admins import Administrador
 from .Categories import Categorias
 from .Clients import Cliente
 from .Identification_Type import TipoIdentificacion
-from .Invoice_Details import Detalle_Factura
+from .Invoice_Details import DetalleFactura
 from .Invoices import Facturas
 from .Logistic import Logistico
 from .Products import Productos
