@@ -1,6 +1,6 @@
 from Models import Categorias
 from Models import Cliente
-from Models import Detalle_Factura
+from Models import DetalleFactura
 from Models import Facturas
 from Models import Productos
 from Models import TipoIdentificacion
