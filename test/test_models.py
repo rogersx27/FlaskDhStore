@@ -1,13 +1,10 @@
 from Models import Categorias
-from Models import Productos
-from Models import Usuario
 from Models import Cliente
-from Models import Tipo_Identificacion
 from Models import Detalle_Factura
 from Models import Facturas
-from Models import Administrador
-from Models import Logistico
-
+from Models import Productos
+from Models import TipoIdentificacion
+from Models import Usuario
 # App
 from __init__ import app, db
 
@@ -53,14 +50,14 @@ def get_all_clients():
 
 
 def create_identification_type(identification_type):
-    nuevo_tipo_identificacion = Tipo_Identificacion(tipo_identificacion=identification_type)
+    nuevo_tipo_identificacion = TipoIdentificacion(tipo_identificacion=identification_type)
     db.session.add(nuevo_tipo_identificacion)
     db.session.commit()
     print("Tipo de identificación creado con éxito", nuevo_tipo_identificacion)
 
 
 def get_all_identification_types():
-    tipos_identificacion = Tipo_Identificacion.query.all()
+    tipos_identificacion = TipoIdentificacion.query.all()
     for tipo in tipos_identificacion:
         print(tipo)
 
@@ -100,16 +97,19 @@ def get_all_products():
     for producto in productos:
         print(producto)
 
+
 def create_invoice(client_id):
     nueva_factura = Facturas(id_cliente_fk=client_id)
     db.session.add(nueva_factura)
     db.session.commit()
     print("Factura creada con éxito", nueva_factura)
 
+
 def get_all_invoices():
     facturas = Facturas.query.all()
     for factura in facturas:
         print(factura)
+
 
 def delete_invoice(invoice_id):
     factura = Facturas.query.filter_by(id_factura=invoice_id).first()
@@ -118,11 +118,14 @@ def delete_invoice(invoice_id):
         db.session.commit()
         print("Factura eliminada con éxito")
 
+
 def create_invoice_detail(invoice_id, product_id, quantity, total_price):
-    nuevo_detalle_factura = Detalle_Factura(id_factura_fk=invoice_id, cod_producto_fk=product_id, cantidad=quantity, precio_total=total_price)
+    nuevo_detalle_factura = Detalle_Factura(id_factura_fk=invoice_id, cod_producto_fk=product_id, cantidad=quantity,
+                                            precio_total=total_price)
     db.session.add(nuevo_detalle_factura)
     db.session.commit()
     print("Detalle de factura creado con éxito", nuevo_detalle_factura)
+
 
 if __name__ == '__main__':
     # We use 'with' to create a context in which we can interact with the database
