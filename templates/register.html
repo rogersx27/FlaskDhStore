@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registerStyles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ownStyles.css') }}">
+</head>
+<body>
+<section class="section-container">
+    <form action="/register" method="post">
+        <div class="nice-form-group">
+            <label>Nombre</label>
+            <input
+                    type="text"
+                    placeholder="Tú nombre"
+                    value=""
+                    name="nombre"
+                    required
+            />
+        </div>
+
+        <div class="nice-form-group">
+            <label>Apellido</label>
+            <input
+                    type="text"
+                    placeholder="Tú apellido"
+                    value=""
+                    name="apellido"
+                    required
+            />
+        </div>
+
+        <div class="nice-form-group">
+            <label>Teléfono</label>
+            <input
+                    type="tel"
+                    placeholder="Tú teléfono"
+                    value=""
+                    class="icon-left"
+                    name="telefono"
+                    required
+            />
+        </div>
+
+        <div class="nice-form-group">
+            <label>Correo Electrónico</label>
+            <input
+                    type="email"
+                    placeholder="Tú correo"
+                    class="icon-left"
+                    name="email"
+                    required
+            />
+        </div>
+
+        <div class="nice-form-group">
+            <label>Ciudad</label>
+            <input
+                    type="text"
+                    placeholder="Tú ciudad"
+                    value=""
+                    class="icon-right"
+                    name="ciudad"
+                    required
+            />
+        </div>
+
+        <div class="nice-form-group">
+            <label>País</label>
+            <input
+                    type="text"
+                    placeholder="Tú país"
+                    value=""
+                    class="icon-right"
+                    name="pais"
+                    required
+            />
+        </div>
+
+        <div class="nice-form-group">
+            <label>Contaseña</label>
+            <input
+                    type="password"
+                    placeholder="Tú contraseña"
+                    value=""
+                    class="icon-right"
+                    name="password"
+                    required
+            />
+        </div>
+
+        <div>
+            <button type="submit" class="btn mt-4">Registrarse</button>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
