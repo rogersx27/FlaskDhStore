@@ -7,7 +7,9 @@ class Logistico(db.Model):
     """
     Modelo de la tabla logisticos
 
-
+    Attributes
+        - id_logistico: int
+        - id_user_fk: int
     """
     __tablename__ = 'logisticos'
 

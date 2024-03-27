@@ -15,16 +15,16 @@ class Usuario(db.Model):
     Modelo de la tabla usuarios
 
     Attributes
-        id_user: int
-        nombre: str
-        apellido: str
-        telefono: str
-        email: str
-        fecha_creacion: datetime
-        ciudad: str
-        pais: str
-        pssword: str
-        TOKEN: str
+        - id_user: int
+        - nombre: str
+        - apellido: str
+        - telefono: str
+        - email: str
+        - fecha_creacion: datetime
+        - ciudad: str
+        - pais: str
+        - pssword: str
+        - TOKEN: str
     """
     __tablename__ = 'usuarios'
 

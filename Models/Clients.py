@@ -5,6 +5,7 @@ from __init__ import db
 # Import the invoice model
 from .Invoices import Facturas
 
+
 class Cliente(db.Model):
     """
     Modelo de la tabla clientes
@@ -20,7 +21,7 @@ class Cliente(db.Model):
 
     id_cliente = Column(Integer, primary_key=True)
     id_user_fk = Column(Integer, ForeignKey('usuarios.id_user'))
-    id_identificacion_fk  = Column(Integer, ForeignKey('tipo_identificacion.id_identificacion'))
+    id_identificacion_fk = Column(Integer, ForeignKey('tipo_identificacion.id_identificacion'))
     num_identificacion = Column(Integer)
     direccion = Column(String(250))
 

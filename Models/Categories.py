@@ -11,8 +11,8 @@ class Categorias(db.Model):
     Modelo de la tabla categorias
 
     Attributes
-        id_categoria: int
-        nom_categoria: str
+        - id_categoria: int
+        - nom_categoria: str
     """
     __tablename__ = 'categorias'
 

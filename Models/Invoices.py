@@ -5,7 +5,7 @@ from sqlalchemy.orm import relationship
 
 from __init__ import db
 # Import the detail invoice model
-from .Invoice_Details import Detalle_Factura
+from .Invoice_Details import DetalleFactura
 
 
 class Facturas(db.Model):
@@ -23,7 +23,7 @@ class Facturas(db.Model):
     id_cliente_fk = Column(Integer, ForeignKey('cliente.id_cliente'))
     fecha_compra = Column(DateTime, default=datetime.now())
 
-    detalle_factura = relationship(Detalle_Factura, backref='facturas', lazy=True)
+    detalle_factura = relationship(DetalleFactura, backref='facturas', lazy=True)
 
     def __repr__(self):
         return f"<Factura(id={self.id_factura}, id_cliente={self.id_cliente_fk}, fecha={self.fecha_compra}, cedula={self.cliente.num_identificacion})>"

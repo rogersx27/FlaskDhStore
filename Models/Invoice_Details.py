@@ -3,15 +3,15 @@ from sqlalchemy import Column, Integer, Float, String, ForeignKey
 from __init__ import db
 
 
-class Detalle_Factura(db.Model):
+class DetalleFactura(db.Model):
     """
     Modelo de la tabla detalle_factura
 
     Attributes
-        id_detalle: int
-        id_factura_fk: int
-        cod_producto_fk: int
-        cantidad: int
+        - id_detalle: int
+        - id_factura_fk: int
+        - cod_producto_fk: int
+        - cantidad: int
     """
     __tablename__ = 'detalle_factura'
 

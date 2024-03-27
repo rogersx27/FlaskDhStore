@@ -8,13 +8,8 @@ class Administrador(db.Model):
     Modelo de la tabla administradores
 
     Attributes
-        id_admin: int
-        nombre: str
-        apellido: str
-        telefono: str
-        email: str
-        pssword: str
-        TOKEN: str
+        - id_admin: int
+        - id_user_fk: int
     """
     __tablename__ = 'administradores'
 

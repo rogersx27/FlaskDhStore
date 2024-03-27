@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 
 from __init__ import db
 # Import the detail invoice model
-from .Invoice_Details import Detalle_Factura
+from .Invoice_Details import DetalleFactura
 
 
 class Productos(db.Model):
@@ -25,7 +25,7 @@ class Productos(db.Model):
     precio_unitario = Column(Integer)
     imgURL = Column(String(250))
 
-    detalle_factura = relationship(Detalle_Factura, backref='productos', lazy=True)
+    detalle_factura = relationship(DetalleFactura, backref='productos', lazy=True)
 
     def __repr__(self):
         return f"<Producto(id={self.cod_producto}, nombre={self.producto}, id_categoria={self.id_categoria_fk})>"
