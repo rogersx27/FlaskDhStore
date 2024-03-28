@@ -14,7 +14,7 @@ def hello_world():  # put application's code here
 
 @app.route('/register', methods=['GET'])
 def register():
-    return render_template('register.html')
+    return render_template('views/register.html')
 
 
 @app.route('/register', methods=['POST'])
