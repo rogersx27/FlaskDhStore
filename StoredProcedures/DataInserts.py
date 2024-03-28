@@ -15,7 +15,7 @@ def insert_user(json_data: str) -> None:
         keys = ["nombre", "apellido", "telefono", "email", "ciudad", "pais"]
         name, lastname, phone, email, city, country = flatten_data(get_json_data(json_data, keys))
         TOKEN = generate_token()
-        password = get_json_data(json_data, ["pssword"])[0]
+        password = get_json_data(json_data, ["password"])[0]
 
         new_user = Usuario(nombre=name, apellido=lastname, telefono=phone, email=email, ciudad=city, pais=country,
                            pssword=password, TOKEN=TOKEN)
