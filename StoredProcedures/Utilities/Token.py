@@ -7,4 +7,4 @@ def generate_token(length: int = 32) -> str:
         :param length: int (default 32)
         :return: str
     """
-    return secrets.token_urlsafe(length)  # 16 bytes long token
+    return secrets.token_urlsafe(length)  # 32 bytes long token
