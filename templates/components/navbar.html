@@ -1,24 +1,24 @@
 <nav>
     <div class="wrapper">
-        <div class="logo"><a href="#">Logo</a></div>
+        <div class="logo"><a href="{{ url_for('index') }}">DHStore</a></div>
         <input type="radio" name="slider" id="menu-btn">
         <input type="radio" name="slider" id="close-btn">
         <ul class="nav-links">
             <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="#">Sobre nosotros</a></li>
             <li>
-                <a href="#" class="desktop-item">Dropdown Menu</a>
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <input type="checkbox" id="showDrop">
-                <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+                <label for="showDrop" class="mobile-item">Catálogo</label>
                 <ul class="drop-menu">
-                    <li><a href="#">Drop menu 1</a></li>
-                    <li><a href="#">Drop menu 2</a></li>
-                    <li><a href="#">Drop menu 3</a></li>
-                    <li><a href="#">Drop menu 4</a></li>
+                    <li><a href="#">Hombres</a></li>
+                    <li><a href="#">Mujeres</a></li>
+                    <li><a href="#">Niños</a></li>
                 </ul>
             </li>
-            <li><a href="#">Feedback</a></li>
+            <li><a href="{{ url_for('login') }}">Inicia sesión</a></li>
+            <li><a href="{{ url_for('register') }}">Registrate</a></li>
         </ul>
         <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>

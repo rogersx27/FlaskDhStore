@@ -8,11 +8,10 @@
 
     <div class="row">
         <ul>
-            <li><a href="#">Contactanos</a></li>
             <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Catálogo</a></li>
-            <li><a href="#">Ingresa</a></li>
-            <li><a href="#">Registrate</a></li>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('login') }}">Ingresa</a></li>
+            <li><a href="{{ url_for('register') }}">Registrate</a></li>
         </ul>
     </div>
 
