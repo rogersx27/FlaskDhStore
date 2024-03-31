@@ -1,0 +1,7 @@
+{% macro img_figure(url, text, size = 1) -%}
+
+    <figure style="background-image: url('{{ url }}')" class="size-{{ size }}">
+        <figcaption>{{ text }}</figcaption>
+    </figure>
+
+{%- endmacro %}

@@ -1,4 +1,5 @@
 {% macro input_props(label, input_type, placeholder, name, position='left', value = '' ) -%}
+
     <div class="nice-form-group">
         <label>{{ label }}</label>
         <input
@@ -10,11 +11,14 @@
                 required
         />
     </div>
+
 {%- endmacro %}
 
 {%- macro checkbox_input(text) -%}
+
     <div class="nice-form-group">
         <input type="checkbox" id="check-1"/>
         <label for="check-1">{{ text }}</label>
     </div>
+
 {%- endmacro %}

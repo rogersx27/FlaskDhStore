@@ -1,0 +1,37 @@
+{% extends './layout.html' %}
+{% import './components/form_input.html' as forms %}
+{% import './components/button.html' as buttons %}
+{% import './components/alert.html' as alerts %}
+
+{% block title %} Inicio de sesión {% endblock %}
+
+{% block content %}
+
+    <main class="demo-page">
+        <div class="demo-page-content">
+            <section>
+                <form action="/login" method="post">
+                    <h1>Inicia sesión</h1>
+                    {{ forms.input_props('Correo Electrónico', 'email', 'ejemplo@gmail.com', 'email') }}
+
+                    {{ forms.input_props('Contaseña', 'password', 'Aquí tu contraseña', 'password', 'right') }}
+
+                    <div>
+                        {{ buttons.general('submit', 'Ingresar') }}
+                    </div>
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                {{ alerts.simple_alert(category, message) }}
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </form>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}
+
+

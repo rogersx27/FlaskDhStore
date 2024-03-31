@@ -1,0 +1,13 @@
+{% macro simple_alert(category, message) -%}
+
+    <label>
+        <input type="checkbox" class="alertCheckbox" autocomplete="off"/>
+        <div class="alert {{ category }}">
+        <span class="alertText">
+            {{ message }}
+            <br class="clear"/>
+        </span>
+        </div>
+    </label>
+
+{%- endmacro %}

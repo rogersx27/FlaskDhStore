@@ -1,10 +1,8 @@
 from Models import Usuario
-
-# utilities
-from .Utilities import flatten_data, generate_token, get_json_data
-
 # database object
 from __init__ import db
+# utilities
+from .Utilities import flatten_data, generate_token, get_json_data
 
 
 def insert_user(json_data: str) -> None:
