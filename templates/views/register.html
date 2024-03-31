@@ -6,31 +6,39 @@
 
 {% block content %}
 
-    <div class="center">
-        <h1>¡Registrate para estar atento a nuestras ofertas!</h1>
-    </div>
+    <main class="demo-page">
+        <div class="demo-page-content">
+            <section>
+                <div class="center">
+                    <h1>¡Registrate para estar atento a nuestras ofertas!</h1>
+                </div>
 
-    <form action="/register" method="post">
-        {{ forms.input_props('Nombre', 'text', 'Tú nombre', 'nombre', '') }}
+                <form action="/register" method="post">
+                    {{ forms.input_props('Nombre', 'text', 'Tú nombre', 'nombre', '') }}
 
-        {{ forms.input_props('Apellido', 'text', 'Tú apellido', 'apellido', '') }}
+                    {{ forms.input_props('Apellido', 'text', 'Tú apellido', 'apellido', '') }}
 
-        {{ forms.input_props('Teléfono', 'tel', 'Tú teléfono', 'telefono') }}
+                    {{ forms.input_props('Teléfono', 'tel', 'Tú teléfono', 'telefono') }}
 
-        {{ forms.input_props('Correo Electrónico', 'email', 'Tú correo', 'email') }}
+                    {{ forms.input_props('Correo Electrónico', 'email', 'Tú correo', 'email') }}
 
-        {{ forms.input_props('Ciudad', 'text', 'Tú ciudad', 'ciudad', '') }}
+                    {{ forms.input_props('Ciudad', 'text', 'Tú ciudad', 'ciudad', '') }}
 
-        {{ forms.input_props('País', 'text', 'Tú país', 'pais', '') }}
+                    {{ forms.input_props('País', 'text', 'Tú país', 'pais', '') }}
 
-        {{ forms.input_props('Contaseña', 'password', 'Tú contraseña', 'password', 'right') }}
+                    {{ forms.input_props('Contaseña', 'password', 'Tú contraseña', 'password', 'right') }}
 
-        {{  forms.checkbox_input('Acepto los términos y condiciones')}}
+                    {{ forms.checkbox_input('Acepto los términos y condiciones') }}
 
-        <div class="center">
-            {{ buttons.general('submit', 'Registrarse') }}
+                    <div class="center">
+                        {{ buttons.general('submit', 'Registrarse') }}
+                    </div>
+                </form>
+            </section>
         </div>
-    </form>
+    </main>
+
+
 {% endblock %}
 
 
