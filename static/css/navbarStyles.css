@@ -1,14 +1,13 @@
 /*
-Styles from: https://codepen.io/fadzrinmadu/pen/bGqrJjB
+All thanks to the author: https://codepen.io/fadzrinmadu/pen/bGqrJjB
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 nav {
-    position: fixed;
+    position: sticky;
     z-index: 99;
     width: 100%;
-
     background: #242526;
 }
 
