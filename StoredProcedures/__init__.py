@@ -8,5 +8,4 @@ Functions:
 """
 
 from .DataInserts import insert_user
-from .DataManage import execute_stored_procedure as set_data
 from .DataManage import request_to_dataframe as get_data
