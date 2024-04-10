@@ -18,24 +18,3 @@ def request_to_dataframe(server_request: Request) -> DataFrame:
         return df
     except Exception as e:
         raise e
-
-
-def execute_stored_procedure(query, params: any) -> None:
-    """
-        Executes the stored procedure on the database.
-        :param query: str
-        :param params: any (tuple, list, dict)
-    """
-    try:
-        print(f"Executing stored procedure...")
-        print(f"Query: {query}")
-        print(f"Params: {params}")
-        with db.session() as session:
-            session.execute(query, params)
-            session.commit()
-        print(f"Stored procedure executed successfully.")
-    except Exception as e:
-        db.session.rollback()
-        raise e
-    finally:
-        print(f"The execution of <| {execute_stored_procedure.__name__} |> has finished.")
